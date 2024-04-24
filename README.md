@@ -1,1 +1,1 @@
-# odin-etch-a-sketch
+etch a sketch project for odin project foundations
