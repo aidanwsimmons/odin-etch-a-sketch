@@ -1,3 +1,46 @@
 body {
     background-color: rgb(109, 196, 196);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+}
+
+.etch {
+    background-color: rgb(255, 82, 82);
+    width: 60%;
+    height: 700px;
+    border-radius: 25px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.screen {
+    background-color: rgb(217, 215, 215);
+    width: 90%;
+    height: 800px;
+}
+
+h1 {
+    color: rgb(255, 234, 91);
+    font-size: 48px;
+    margin: -30px 0 10px;
+    font-family: cursive;
+}
+
+.buttons {
+    display: flex;
+    height: 40px;
+    width: 100%;
+    gap: 20px;
+    margin-top: 30px;
+    align-items: center;
+    justify-content: space-around;
+    gap: 100px;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
 }
