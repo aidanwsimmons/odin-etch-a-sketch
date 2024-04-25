@@ -27,9 +27,7 @@ body {
 }
 
 .cell {
-    width: calc(33.33% - 10px); /* Adjust width of cells based on container width */
-    height: calc(33.33% - 10px); /* Adjust height of cells based on container height */
-    margin: 5px; /* Adjust margin between cells as needed */
+    flex-basis: calc(100% / 64);
     border: 1px solid black;
     box-sizing: border-box;
 }
