@@ -6,6 +6,9 @@ const rainbowBtn = document.querySelector(".rainbow");
 
 let mode = "classic";
 
+let initialOpacity = 0.1
+const opacityStep = 0.1
+
 const numRows = 80;
 const numCols = 80;
 
@@ -25,12 +28,30 @@ function buildGrid() {
       });
     });
   }
-  else if(mode == 'modern'){
+  // else if(mode == 'modern'){
+  //   const cells = document.querySelectorAll(".cell");
 
-  }
-  else if(mode == 'rainbow'){
+  //   let currentOpacity = initialOpacity
 
-  }
+  //   function darkenCell(cell, opacity) {
+  //       cell.style.backgroundColor = "rgba(0, 0, 0, " + opacity + ")"
+  //   }
+
+  //   cells.forEach((cell) => {
+  //     cell.addEventListener("mouseenter", () => {
+  //       darkenCell(this, currentOpacity)
+  //       currentOpacity += opacityStep
+  //     });
+  //   });
+  // }
+  // else if(mode == 'rainbow'){
+  //   const cells = document.querySelectorAll(".cell");
+  //   cells.forEach((cell) => {
+  //     cell.addEventListener("mouseenter", () => {
+  //       setRandomColor(this)
+  //     });
+  //   });
+  // }
 }
 
 function eraseGrid() {
@@ -52,16 +73,28 @@ classicBtn.addEventListener("click", () => {
     buildGrid()
 })
 
-modernBtn.addEventListener("click", () => {
-    mode = 'modern'
-    clearGrid()
-    buildGrid()
-})
+// modernBtn.addEventListener("click", () => {
+//     mode = 'modern'
+//     clearGrid()
+//     buildGrid()
+// })
 
-classicBtn.addEventListener("click", () => {
-    mode = 'rainbow'
-    clearGrid()
-    buildGrid()
-})
+// rainbowBtn.addEventListener("click", () => {
+//     mode = 'rainbow'
+//     clearGrid()
+//     buildGrid()
+// })
+
+// function getRandomColor() {
+//     const hue = Math.floor(Math.random() * 360); // Random hue value between 0 and 360
+//     const saturation = "100%"; // Saturation at maximum for vibrant colors
+//     const lightness = "50%"; // Lightness at 50% for balanced colors
+//     return "hsl(" + hue + ", " + saturation + ", " + lightness + ")";
+// }
+
+// function setRandomColor(cel){
+//     let randomColor = getRandomColor();
+//     cel.style.backgroundColor = randomColor;
+// }
 
 document.addEventListener("DOMContentLoaded", buildGrid);
