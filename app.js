@@ -75,6 +75,7 @@ function eraseGrid() {
   const cells = document.querySelectorAll(".cell");
   cells.forEach((cell) => {
     cell.classList.remove("dark");
+    cell.style.backgroundColor = ''
   });
 }
 
