@@ -20,4 +20,14 @@ function buildGrid(){
     })
 }
 
+function eraseGrid() {
+    const cells = document.querySelectorAll('.cell');
+    cells.forEach(cell => {
+        cell.classList.remove('dark');
+    });
+}
+
+
+eraseBtn.addEventListener('click', eraseGrid)
+
 document.addEventListener("DOMContentLoaded", buildGrid)
