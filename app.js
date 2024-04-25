@@ -1,10 +1,15 @@
 const screen = document.querySelector(".screen");
 const eraseBtn = document.querySelector(".erase");
+const smallBtn = document.querySelector('.small')
+const mediumBtn = document.querySelector('.medium')
+const largeBtn = document.querySelector('.large')
+
 const classicBtn = document.querySelector(".classic");
 const modernBtn = document.querySelector(".modern");
 const rainbowBtn = document.querySelector(".rainbow");
 
 let mode = "classic";
+let size = small
 
 let initialOpacity = 0.1
 const opacityStep = 0.1
