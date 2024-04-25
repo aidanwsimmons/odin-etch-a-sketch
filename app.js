@@ -8,7 +8,7 @@ const classicBtn = document.querySelector(".classic");
 const modernBtn = document.querySelector(".modern");
 const rainbowBtn = document.querySelector(".rainbow");
 
-let mode = "rainbow";
+let mode = "classic";
 let size = 'medium'
 
 let initialOpacity = 0.1
@@ -112,11 +112,11 @@ classicBtn.addEventListener("click", () => {
 //     buildGrid()
 // })
 
-// rainbowBtn.addEventListener("click", () => {
-//     mode = 'rainbow'
-//     clearGrid()
-//     buildGrid()
-// })
+rainbowBtn.addEventListener("click", () => {
+    mode = 'rainbow'
+    clearGrid()
+    buildGrid()
+})
 
 eraseBtn.addEventListener("click", eraseGrid);
 
