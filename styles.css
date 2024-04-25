@@ -4,7 +4,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    padding: 50px;
+    overflow: hidden;
 }
 
 .etch {
@@ -27,9 +28,13 @@ body {
 }
 
 .cell {
-    flex-basis: calc(100% / 64);
+    flex-basis: calc(100% / 80);
     border: 1px solid black;
     box-sizing: border-box;
+}
+
+.cell.dark {
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 h1 {
