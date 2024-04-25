@@ -20,8 +20,18 @@ body {
 
 .screen {
     background-color: rgb(217, 215, 215);
-    width: 90%;
+    width: 1000px;
     height: 800px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cell {
+    width: calc(33.33% - 10px); /* Adjust width of cells based on container width */
+    height: calc(33.33% - 10px); /* Adjust height of cells based on container height */
+    margin: 5px; /* Adjust margin between cells as needed */
+    border: 1px solid black;
+    box-sizing: border-box;
 }
 
 h1 {
