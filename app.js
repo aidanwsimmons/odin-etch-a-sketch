@@ -8,7 +8,7 @@ const classicBtn = document.querySelector(".classic");
 const modernBtn = document.querySelector(".modern");
 const rainbowBtn = document.querySelector(".rainbow");
 
-let mode = "classic";
+let mode = "rainbow";
 let size = 'medium'
 
 let initialOpacity = 0.1
@@ -61,14 +61,14 @@ function buildGrid() {
   //     });
   //   });
   // }
-  // else if(mode == 'rainbow'){
-  //   const cells = document.querySelectorAll(".cell");
-  //   cells.forEach((cell) => {
-  //     cell.addEventListener("mouseenter", () => {
-  //       setRandomColor(this)
-  //     });
-  //   });
-  // }
+  else if(mode == 'rainbow'){
+    const cells = document.querySelectorAll(".cell");
+    cells.forEach((cell) => {
+      cell.addEventListener("mouseenter", () => {
+        setRandomColor(cell)
+      });
+    });
+  }
 }
 
 function eraseGrid() {
@@ -120,16 +120,16 @@ classicBtn.addEventListener("click", () => {
 
 eraseBtn.addEventListener("click", eraseGrid);
 
-// function getRandomColor() {
-//     const hue = Math.floor(Math.random() * 360); // Random hue value between 0 and 360
-//     const saturation = "100%"; // Saturation at maximum for vibrant colors
-//     const lightness = "50%"; // Lightness at 50% for balanced colors
-//     return "hsl(" + hue + ", " + saturation + ", " + lightness + ")";
-// }
+function getRandomColor() {
+    const hue = Math.floor(Math.random() * 360); // Random hue value between 0 and 360
+    const saturation = "100%"; // Saturation at maximum for vibrant colors
+    const lightness = "50%"; // Lightness at 50% for balanced colors
+    return "hsl(" + hue + ", " + saturation + ", " + lightness + ")";
+}
 
-// function setRandomColor(cel){
-//     let randomColor = getRandomColor();
-//     cel.style.backgroundColor = randomColor;
-// }
+function setRandomColor(cell){
+    let randomColor = getRandomColor();
+    cell.style.backgroundColor = randomColor;
+}
 
 document.addEventListener("DOMContentLoaded", buildGrid);
