@@ -9,19 +9,31 @@ const modernBtn = document.querySelector(".modern");
 const rainbowBtn = document.querySelector(".rainbow");
 
 let mode = "classic";
-let size = small
+let size = 'medium'
 
 let initialOpacity = 0.1
 const opacityStep = 0.1
 
-const numRows = 80;
-const numCols = 80;
+let numRows = 60;
+let numCols = 60;
 
 function buildGrid() {
+  if(size == 'small'){
+    numRows = 40
+    numCols = 40
+  }else if(size == 'medium'){
+    numRows = 60
+    numCols = 60
+  }
+  else if(size == 'large'){
+    numRows = 80
+    numCols = 80
+  }
   // Loop to create and append div elements for each cell in the grid
   for (let i = 0; i < numRows * numCols; i++) {
     const cell = document.createElement("div");
     cell.classList.add("cell");
+    cell.style.flexBasis = `calc(80% / ${numRows})`
     screen.appendChild(cell);
   }
 
@@ -70,12 +82,28 @@ function clearGrid() {
     screen.innerHTML = ''
 }
 
-eraseBtn.addEventListener("click", eraseGrid);
+smallBtn.addEventListener("click", () => {
+  size = 'small'
+  clearGrid()
+  buildGrid()
+})
+
+mediumBtn.addEventListener("click", () => {
+  size = 'medium'
+  clearGrid()
+  buildGrid()
+})
+
+largeBtn.addEventListener("click", () => {
+  size = 'large'
+  clearGrid()
+  buildGrid()
+})
 
 classicBtn.addEventListener("click", () => {
     mode = 'classic'
     clearGrid()
-    buildGrid()
+    buildGrid(size, mode)
 })
 
 // modernBtn.addEventListener("click", () => {
@@ -89,6 +117,8 @@ classicBtn.addEventListener("click", () => {
 //     clearGrid()
 //     buildGrid()
 // })
+
+eraseBtn.addEventListener("click", eraseGrid);
 
 // function getRandomColor() {
 //     const hue = Math.floor(Math.random() * 360); // Random hue value between 0 and 360

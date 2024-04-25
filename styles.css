@@ -28,8 +28,8 @@ body {
 }
 
 .cell {
-    flex-basis: calc(100% / 80);
-    border: 1px solid black;
+    flex-basis: calc(80% / 60);
+    border: 0.2px solid rgb(136, 135, 135);
     box-sizing: border-box;
 }
 
