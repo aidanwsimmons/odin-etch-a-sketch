@@ -66,6 +66,7 @@ function eraseGrid() {
   const cells = document.querySelectorAll(".cell");
   cells.forEach((cell) => {
     cell.classList.remove("dark");
+    cell.classList.remove('gradient')
     cell.style.backgroundColor = "";
   });
 }
