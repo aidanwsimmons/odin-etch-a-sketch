@@ -77,35 +77,53 @@ function clearGrid() {
 
 smallBtn.addEventListener("click", () => {
   size = "small";
+  smallBtn.classList.add('active')
+  mediumBtn.classList.remove('active')
+  largeBtn.classList.remove('active')
   clearGrid();
   buildGrid();
 });
 
 mediumBtn.addEventListener("click", () => {
   size = "medium";
+  smallBtn.classList.remove('active')
+  mediumBtn.classList.add('active')
+  largeBtn.classList.remove('active')
   clearGrid();
   buildGrid();
 });
 
 largeBtn.addEventListener("click", () => {
   size = "large";
+  smallBtn.classList.remove('active')
+  mediumBtn.classList.remove('active')
+  largeBtn.classList.add('active')
   clearGrid();
   buildGrid();
 });
 
 classicBtn.addEventListener("click", () => {
   mode = "classic";
+  classicBtn.classList.add('active')
+  modernBtn.classList.remove('active')
+  rainbowBtn.classList.remove('active')
   clearGrid();
   buildGrid(size, mode);
 });
 
 modernBtn.addEventListener("click", () => {
   mode = "modern";
+  classicBtn.classList.remove('active')
+  modernBtn.classList.add('active')
+  rainbowBtn.classList.remove('active')
   clearGrid();
   buildGrid();
 });
 
 rainbowBtn.addEventListener("click", () => {
+  classicBtn.classList.remove('active')
+  modernBtn.classList.remove('active')
+  rainbowBtn.classList.add('active')
   mode = "rainbow";
   clearGrid();
   buildGrid();
