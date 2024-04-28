@@ -21,7 +21,7 @@ body {
 
 .screen {
     background-color: rgb(217, 215, 215);
-    width: 1000px;
+    width: 92%;
     height: 800px;
     display: flex;
     flex-wrap: wrap;
